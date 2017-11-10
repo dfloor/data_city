@@ -87,6 +87,7 @@ class Root extends Component {
     const {viewport,plotdata,shapedata,roaddata} = this.state;
 
     return (
+      <div>
       <MapGL
         {...viewport}
         onViewportChange={this._onViewportChange.bind(this)}
@@ -100,6 +101,13 @@ class Root extends Component {
            />
           
       </MapGL>
+        <div id="control-panel">
+          <h1>テストです</h1>
+          <p>road</p>
+          <p>bldg</p>
+          <p>point</p>
+        </div>
+      </div>
     );
   }
 }
