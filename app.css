@@ -7,7 +7,7 @@ body {
     overflow:hidden;
   }
 
-#control-panel {
+.control-panel {
     position: fixed;
     text-align: center;
     z-index: 0;
