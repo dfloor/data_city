@@ -7,6 +7,8 @@ import DeckGLOverlay from './deckgl-overlay.js';
 import {json as requestJson} from 'd3-request';
 import {csv as requestCsv} from 'd3-request';
 
+import LayerControls from './layer-controls'
+
 // Set your mapbox token here
 const MAPBOX_TOKEN = "pk.eyJ1IjoiZGRsIiwiYSI6ImNqMjcxaDU1eTAwMnYycXBqdHU2eDF3NnEifQ.GmZGEAsreyN1qJ4Jfki8qQ"; // eslint-disable-line
 
@@ -87,6 +89,7 @@ class Root extends Component {
     const {viewport,plotdata,shapedata,roaddata} = this.state;
 
     return (
+      <div>
       <MapGL
         {...viewport}
         onViewportChange={this._onViewportChange.bind(this)}
@@ -100,6 +103,8 @@ class Root extends Component {
            />
           
       </MapGL>
+      <LayerControls />
+      </div>
     );
   }
 }
